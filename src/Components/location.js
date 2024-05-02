@@ -14,7 +14,7 @@ function Location() {
             </ul>
             <hr /> {/* Horizontal line */}
             <div>
-                <img src="vector.svg" alt="Vector" /><p>Your location will help us serve better and extend a personalised experience.</p>
+                <p><img src="vector.svg" alt="Vector" />Your location will help us serve better &nbsp; and extend a personalised experience.</p>
             </div>
         </div>
     );

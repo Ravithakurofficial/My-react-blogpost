@@ -11,7 +11,7 @@ function Home() {
             <Header />
             <Banner />
             <Link />
-            <div>
+            <div style={{display : 'flex', marginTop : '1%'}}>
                 <AllPost />
                 <Location />
             </div>
