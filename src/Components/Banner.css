@@ -1,0 +1,28 @@
+/* Banner.css */
+.banner-background {
+    background: url('https://eco-n-tech.com/wp-content/cache/thumb/ec/890ddcd1c2ce5ec_3806x1034.png') center center / cover no-repeat;
+    height: 500px; 
+    position: relative;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 10%;  
+    left: 2%; 
+    padding: 20px;
+    width: 80%; /* Adjusted from 100% to 80% */
+    max-width: 400px; /* Added max-width to prevent stretching on larger screens */
+    color: white; /* Set text color to white for better contrast */
+}
+
+@media (max-width: 768px) {
+    .banner-background {
+        height: 300px;
+    }
+
+    .banner-text {
+        bottom: 5%; /* Adjusted from 10% to 5% */
+        left: 5%; /* Adjusted from 10% to 5% */
+        width: 90%; /* Adjusted from 80% to 90% */
+    }
+}

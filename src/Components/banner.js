@@ -1,11 +1,20 @@
 import React from "react";
+import "./Banner.css"; // Import your custom CSS for detailed styles
 
 function Banner() {
     return (
-        <div className="container1" style={{ zIndex: 1, background: 'url(https://eco-n-tech.com/wp-content/cache/thumb/ec/890ddcd1c2ce5ec_3806x1034.png) center center / cover no-repeat', height: '500px', display: 'flex', alignItems: 'flex-end' }}>
-            <div className="container1-text" style={{ textAlign: 'left', padding: '20px', marginLeft: '3%' }}>
-                <h1 className="text-white">Computer Engineering</h1>
-                <p className="text-white mb-5">142,765 Computer Engineers follow this</p>
+        <div className="container-fluid p-0">
+            <div className="banner-background">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="banner-text">
+                                <h1 className="text-white">Computer Engineering</h1>
+                                <h5 className="text-white md-5">142,765 Computer Engineers follow this</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

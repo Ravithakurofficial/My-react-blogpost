@@ -2,7 +2,7 @@ import React from "react";
 
 function AllPost() {
     return (
-        <div className="posts-center position-relative" style={{marginLeft : '15%', width : '38%'}}>
+        <div className="posts-center position-relative">
             <div className="d-flex flex-column border border-1 rounded-2" style={{ maxWidth: "692px", borderColor: "rgb(224, 224, 224)", fill: "rgb(255, 255, 255)" }}>
                 <img src="https://dont-copy.netlify.app/assets/nature-rDsfVg8l.jpg" alt="Nature" className="imagePost" />
                 <div className="p-4">

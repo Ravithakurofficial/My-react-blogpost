@@ -2,7 +2,7 @@ import React from "react";
 
 function Location() {
     return (
-        <div className="container" style={{width : '20%'}}>
+        <div className="container">
             <ul className="list-unstyled">
                 <li className="d-flex align-items-center justify-content-between">
                     <div className="d-flex">
@@ -14,7 +14,7 @@ function Location() {
             </ul>
             <hr /> {/* Horizontal line */}
             <div>
-                <p><img src="vector.svg" alt="Vector" />Your location will help us serve better &nbsp; and extend a personalised experience.</p>
+                <p><img src="vector.svg" alt="Vector" />Your location will help us serve better <br />&nbsp; and extend a personalised experience.</p>
             </div>
         </div>
     );
