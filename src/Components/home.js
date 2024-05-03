@@ -6,9 +6,19 @@ import AllPost from "./allpost";
 import Location from "./location";
 import Post368 from "./post368";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Modals from "./modal";
 
 function Home() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [showModal, setShowModal] = useState(false);
+
+    const handleCreateAccount = () => {
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
 
     useEffect(() => {
         const handleResize = () => {
@@ -25,7 +35,7 @@ function Home() {
     return (
         <div>
             {!isMobile && <Header />}
-            {isMobile && <img src="Topbanner.svg" style={{height : '15%'}} alt="topbanner" />}
+            {isMobile && <img onClick={handleCreateAccount} src="Topbanner.svg" style={{height : '15%'}} alt="topbanner" />}
             <Banner />
             
             <div className="container mt-3">
@@ -56,6 +66,7 @@ function Home() {
                     )}
                 </div>
             </div>
+            <Modals  showModal={showModal} handleCloseModal={handleCloseModal} />
         </div>
     );
 }
