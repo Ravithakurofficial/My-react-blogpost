@@ -36,7 +36,7 @@ function Header() {
                 </button>
             </div>
 
-            <Modals showModal={showModal} handleCloseModal={handleCloseModal} />
+            <Modals  showModal={showModal} handleCloseModal={handleCloseModal} />
         </div>
     );
 }
