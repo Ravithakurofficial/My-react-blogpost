@@ -24,7 +24,7 @@ function Home() {
     };
     const email = "thakurravikumar400@gmail.com";
     const trackEmailOpen = () => {
-        fetch(`https://74fc-146-196-33-230.ngrok-free.app/track?email=${encodeURIComponent(email)}`, {
+        fetch(`https://74fc-146-196-33-230.ngrok-free.app/track?email=${email}`, {
             method: 'GET',
             headers: {
                 'ngrok-skip-browser-warning': 'true', // Skip ngrok's browser warning
