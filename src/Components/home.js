@@ -11,13 +11,35 @@ import Modals from "./modal";
 function Home() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
     const [showModal, setShowModal] = useState(false);
+    const [email, setEmail] = useState("thakurravikumar400@gmail.com"); // Example email, can be dynamic
 
     const handleCreateAccount = () => {
         setShowModal(true);
+        // Trigger the fetch request when the image is clicked
+        trackEmailOpen();
     };
 
     const handleCloseModal = () => {
         setShowModal(false);
+    };
+
+    const trackEmailOpen = () => {
+        fetch(`https://74fc-146-196-33-230.ngrok-free.app/track?email=${encodeURIComponent(email)}`, {
+            method: 'GET',
+            headers: {
+                'ngrok-skip-browser-warning': 'true', // Skip ngrok's browser warning
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Tracking request successful');
+            } else {
+                console.error('Tracking request failed');
+            }
+        })
+        .catch(error => {
+            console.error('Error during the request:', error);
+        });
     };
 
     useEffect(() => {
@@ -35,7 +57,7 @@ function Home() {
     return (
         <div>
             {!isMobile && <Header />}
-            {isMobile && <img onClick={handleCreateAccount} src="Topbanner.svg" style={{height : '15%'}} alt="topbanner" />}
+            {isMobile && <img onClick={handleCreateAccount} src="Topbanner.svg" style={{height: '15%'}} alt="topbanner" />}
             <Banner />
             
             <div className="container mt-3">
@@ -66,7 +88,7 @@ function Home() {
                     )}
                 </div>
             </div>
-            <Modals  showModal={showModal} handleCloseModal={handleCloseModal} />
+            <Modals showModal={showModal} handleCloseModal={handleCloseModal} />
         </div>
     );
 }
