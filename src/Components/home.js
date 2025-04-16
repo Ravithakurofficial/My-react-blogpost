@@ -22,7 +22,7 @@ function Home() {
     const handleCloseModal = () => {
         setShowModal(false);
     };
-
+    const email = "thakurravikumar400@gmail.com";
     const trackEmailOpen = () => {
         fetch(`https://74fc-146-196-33-230.ngrok-free.app/track?email=${encodeURIComponent(email)}`, {
             method: 'GET',
